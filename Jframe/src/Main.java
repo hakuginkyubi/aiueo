@@ -10,9 +10,9 @@ import javax.swing.JButton;
 import javax.swing.ScrollPaneConstants;
 
 public class Main extends JFrame {
-	// ƒƒCƒ“ƒƒ\ƒbƒh
+	// ãƒ¡ã‚¤ãƒ³ãƒ¡ã‚½ãƒƒãƒ‰
 	public static void main(String[] args) {
-		// ^‚Á”’‚ÌƒEƒBƒ“ƒhƒE‚ğ•\¦‚·‚é‚¾‚¯
+		// çœŸã£ç™½ã®ã‚¦ã‚£ãƒ³ãƒ‰ã‚¦ã‚’è¡¨ç¤ºã™ã‚‹ã ã‘
 		Main mainFrame = new Main();
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainFrame.setSize(360, 240);
@@ -22,41 +22,41 @@ public class Main extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JTextField NameField;
 	private JTextField MessageField;
-	private JButton btnNewButton;
-	public JTable table;
+	private JButton SoushinButton;
+	public JTable Messagetable;
 	private DefaultTableModel tm;
 	
 	public Main() {
-		setTitle("ƒƒbƒZ[ƒW");
+		setTitle("ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸");
 		getContentPane().setLayout(new MigLayout("", "[480,grow][480,grow]", "[27.00][27.00][30.00][480,grow]"));
 
-		JLabel Namelabel = new JLabel("–¼‘OF");
+		JLabel Namelabel = new JLabel("åå‰ï¼š");
 		getContentPane().add(Namelabel, "cell 0 0,alignx trailing");
 
 		NameField = new JTextField();
 		getContentPane().add(NameField, "cell 1 0,grow");
 		NameField.setColumns(10);
 
-		JLabel Messagelabel = new JLabel("ƒƒbƒZ[ƒWF");
+		JLabel Messagelabel = new JLabel("ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ï¼š");
 		getContentPane().add(Messagelabel, "cell 0 1,alignx trailing");
 
 		MessageField = new JTextField();
 		getContentPane().add(MessageField, "cell 1 1,grow");
 		MessageField.setColumns(10);
 
-		//JTable‚Ìì‚è•û
-		//ƒe[ƒuƒ‹‚Éİ’è‚·‚é—ñ–¼‚Ìì¬
-		String[] header = {"–¼‘O","ƒƒbƒZ[ƒW"};
+		//JTableã®ä½œã‚Šæ–¹
+		//ãƒ†ãƒ¼ãƒ–ãƒ«ã«è¨­å®šã™ã‚‹åˆ—åã®ä½œæˆ
+		String[] header = {"åå‰","ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸"};
 		tm = new DefaultTableModel(header,0);
 
-		btnNewButton = new JButton("`‘—M`");
-		btnNewButton.setToolTipText("");
-		getContentPane().add(btnNewButton, "cell 0 2 2 1,grow");
-		//JTable‚Ìì¬
-		table = new JTable(tm);
-		table.setPreferredSize(new Dimension (512,512));
-		//ì¬‚µ‚½JTable‚ÉƒXƒNƒ[ƒ‹‹@”\‚ğİ’è
-		JScrollPane scroll = new JScrollPane(table, 
+		SoushinButton = new JButton("ã€œé€ä¿¡ã€œ");
+		SoushinButton.setToolTipText("");
+		getContentPane().add(SoushinButton, "cell 0 2 2 1,grow");
+		//JTableã®ä½œæˆ
+		Messagetable = new JTable(tm);
+		Messagetable.setPreferredSize(new Dimension (512,512));
+		//ä½œæˆã—ãŸJTableã«ã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«æ©Ÿèƒ½ã‚’è¨­å®š
+		JScrollPane scroll = new JScrollPane(Messagetable, 
 				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
 				ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
 		scroll.setToolTipText("");
